@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Clubs{% endblock %}
+{% block page_title %}Club Activities{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h4 class="mb-3">Active Clubs</h4>
+  <ul class="list-group">
+    {% for club in clubs %}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span><i class="fas fa-users mr-2 text-success"></i>{{ club.name }}</span>
+        <span>{{ club.members_count }} Members</span>
+      </li>
+    {% empty %}
+      <li class="list-group-item">No clubs registered.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

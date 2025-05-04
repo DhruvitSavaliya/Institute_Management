@@ -1,0 +1,15 @@
+{% extends 'institute_app/dashboard.html' %}
+{% block content %}
+<h2>Confirm Delete Department</h2>
+
+<p>Are you sure you want to delete Department <strong>{{ department.username }}</strong> (ID: {{ department.id }})?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="confirm">Type Y to confirm or N to cancel:</label>
+        <input type="text" name="confirm" class="form-control" maxlength="1" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+{% endblock %}

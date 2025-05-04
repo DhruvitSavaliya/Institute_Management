@@ -1,0 +1,139 @@
+/* General page layout */
+body {
+    margin: 0;
+    padding: 0;
+    background: #eaf0f8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Center the login box vertically */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Login box wrapper */
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo and title section */
+.login-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-logo .image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.login-logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2f5dff;
+    text-decoration: none;
+}
+
+.login-logo a:hover {
+    color: #1a3ec6;
+}
+
+/* Neumorphic card */
+.neumorphic-card {
+    background: #e0e5ec;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 20px 20px 60px #becbd9, -20px -20px 60px #ffffff;
+    text-align: center;
+}
+
+/* Card title */
+.neumorphic-title {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Input fields */
+.neumorphic-input {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 16px;
+    background: #e0e5ec;
+    box-shadow: inset 6px 6px 10px #c1c9d6, inset -6px -6px 10px #ffffff;
+    transition: box-shadow 0.2s;
+}
+
+.neumorphic-input:focus {
+    outline: none;
+    box-shadow: inset 4px 4px 8px #c1c9d6, inset -4px -4px 8px #ffffff;
+}
+
+/* Submit button */
+.neumorphic-button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #e0e5ec;
+    box-shadow: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: box-shadow 0.2s ease;
+}
+
+.neumorphic-button:hover {
+    box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+}
+
+/* Options section: Remember me + Forgot password */
+.neumorphic-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Links */
+.neumorphic-link {
+    color: #2f5dff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.neumorphic-link:hover {
+    color: #1a3ec6;
+    text-decoration: underline;
+}
+
+/* Footer inside the card */
+.neumorphic-footer {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Page footer */
+.login-footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #c0c9d9;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+}

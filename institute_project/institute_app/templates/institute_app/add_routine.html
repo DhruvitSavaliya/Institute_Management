@@ -1,0 +1,9 @@
+{% extends 'institute_app/dashboard.html' %}
+{% block content %}
+<h2>Add Routine</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+{% endblock %}

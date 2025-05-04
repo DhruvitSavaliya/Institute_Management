@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Institute Dashboard{% endblock %}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'institute_app/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'institute_app/css/login.css' %}">
+  <link rel="stylesheet" href="{% static 'institute/register.css' %}">
+</head>
+<body>
+  
+{% block content %}
+      
+{% endblock content %}
+
+<script src="{% static 'institute_app/js/script.js' %}"></script>
+</body>
+</html>

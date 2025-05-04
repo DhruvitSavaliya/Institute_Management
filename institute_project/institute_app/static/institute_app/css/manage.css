@@ -1,0 +1,114 @@
+/* Main container styling */
+.container-fluid {
+    padding: 40px 30px;
+    background-color: #FAFAFA;
+}
+
+/* Header section with title and button */
+.d-flex.justify-content-between.align-items-center {
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #222222;
+    font-weight: 700;
+}
+
+/* Add Student Button */
+a.btn-primary {
+    background-color: #222222;
+    border-color: #222222;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.3s ease;
+}
+
+a.btn-primary:hover {
+    background-color: #444;
+    border-color: #444;
+}
+
+/* Table container responsiveness */
+.table-responsive {
+    box-shadow: 10px 10px 25px #d1d1d1, -10px -10px 25px #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Table styling */
+table.table {
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #ffffff;
+}
+
+/* Table header */
+thead.table-light th {
+    background-color: #f0f0f0;
+    color: #222222;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table body cells */
+table td, table th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    font-size: 15px;
+    color: #222;
+}
+
+/* Buttons inside table */
+.btn-sm {
+    font-size: 13px;
+    padding: 6px 12px;
+    font-weight: 500;
+}
+
+/* Edit button */
+.btn-warning {
+    background-color: #f0ad4e;
+    border: none;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #ec971f;
+}
+
+/* Delete button */
+.btn-danger {
+    background-color: #d9534f;
+    border: none;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* No data row */
+.table td[colspan="5"] {
+    color: #929292;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        margin-top: 10px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

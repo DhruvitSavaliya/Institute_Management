@@ -1,0 +1,9 @@
+{% extends 'institute_app/dashboard.html' %}
+{% block content %}
+<h2>Update Parent Details </h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+{% endblock %}

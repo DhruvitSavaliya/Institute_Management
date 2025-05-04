@@ -1,0 +1,47 @@
+{% extends 'institute_app/dashboard.html' %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Manage Routine </h3>
+        <a href="{% url 'add_routine' %}" class="btn btn-primary">+ Add Routine</a>
+    </div>
+
+    <!-- Example Teacher Table -->
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Class_Name</th>
+                    <th>Subject</th>
+                    <th>Teacher</th>
+                    <th>Day_of_week</th>
+                    <th>Start_Time</th>
+                    <th>End_Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for routine in routines %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ routine.class_name }}</td>
+                    <td>{{ routine.subject }}</td>
+                    <td>{{ routine.teacher }}</td>
+                    <td>{{ routine.day_of_week }}</td>
+                    <td>{{ routine.start_time }}</td>
+                    <td>{{ routine.end_time }}</td>
+                    <td>
+                        <a href="{% url 'update_routine' routine.id %}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="{% url 'delete_routine' routine.id %}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-center">No Routine found.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

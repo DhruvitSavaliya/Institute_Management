@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="login-container">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <div class="image">
+                <img src="{% static 'institute_app/images/Logo.png' %}" class="img-circle elevation-2" alt="PIET Image" />
+            </div>
+            <b> Institute Management</b>
+        </div>
+
+        <div class="neumorphic-card">
+            <p class="login-box-msg">Sign in to  Institute Management System</p>
+            <h2 class="neumorphic-title">Login</h2>
+            
+            <form method="post">
+                {% csrf_token %}
+                <input type="email" name="email" class="neumorphic-input" placeholder="Email" required />
+                <input type="password" name="password" class="neumorphic-input" placeholder="Password" required />
+
+                <div class="neumorphic-options">
+                    <label><input type="checkbox" name="remember"> Remember Me</label>
+                    <a href="#" class="neumorphic-link">Forgot Password?</a>
+                </div>
+                <button type="submit" class="neumorphic-button">Sign In</button>
+            </form>
+
+            <p class="neumorphic-footer">
+                Don't have an account? <a href="{% url 'register' %}" class="neumorphic-link">Register</a>
+            </p>
+        </div>
+        <footer class="login-footer">
+            <strong>&copy; {% now "Y" %}</strong> <br />
+            <div>Developed by Dhruvit Savaliya</div>
+        </footer>
+    </div>
+</div>
+
+{% endblock %}
